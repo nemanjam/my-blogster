@@ -3,18 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "workspaces": [
-    "packages/@repoconfig/*",
+    "packages/config/*",
     "packages/*",
-    "themes/*",
-    "templates"
+    "blog"
   ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "build:minimal": "turbo run @theme/minimal#build",
-    "build:sleek": "turbo run @theme/sleek#build",
-    "build:newspaper": "turbo run @theme/newspaper#build",
-    "build:bubblegum": "turbo run @theme/bubblegum#build",
+    "build:blog": "turbo run @blog#build",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",
     "lint": "turbo run lint",
@@ -22,13 +18,13 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
-    "@manypkg/cli": "^0.19.2",
+    "@manypkg/cli": "^0.21.1",
     "eslint-config-custom": "*",
-    "prettier": "latest",
-    "turbo": "latest"
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=20.9.0"
   },
   "packageManager": "yarn@1.22.19"
 }

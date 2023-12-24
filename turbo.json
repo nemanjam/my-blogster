@@ -14,19 +14,7 @@
     "dev": {
       "cache": false
     },
-    "@theme/minimal#build": {
-      "cache": false,
-      "outputs": []
-    },
-    "@theme/sleek#build": {
-      "cache": false,
-      "outputs": []
-    },
-    "@theme/newspaper#build": {
-      "cache": false,
-      "outputs": []
-    },
-    "@theme/bubblegum#build": {
+    "@blog#build": {
       "cache": false,
       "outputs": []
     }
