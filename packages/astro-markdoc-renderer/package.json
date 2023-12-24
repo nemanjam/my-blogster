@@ -1,0 +1,31 @@
+{
+  "name": "astro-markdoc-renderer",
+  "version": "0.0.1-alpha.1",
+  "description": "Markdoc renderer for Astro",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "dependencies": {
+    "@markdoc/markdoc": "^0.2.1",
+    "markdown-it": "^13.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-component",
+    "markdoc"
+  ],
+  "author": "Dinesh Pandiyan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flexdinesh/blogster",
+    "directory": "packages/astro-markdoc-renderer"
+  }
+}

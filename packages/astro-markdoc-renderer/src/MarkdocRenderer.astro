@@ -1,0 +1,62 @@
+---
+import CodeBlock from "./CodeBlock.astro";
+import Code from "./Code.astro";
+import { Node } from "./node-helper";
+import type { Content, Components } from "./types";
+
+type Props = {
+  content: Content;
+  components?: Components;
+};
+
+const { content, components: customComponents } = Astro.props;
+
+const defaultComponents = {
+  CodeBlock: {
+    Component: CodeBlock,
+    props: {},
+  },
+  code: {
+    Component: Code,
+    props: {},
+  },
+};
+
+const components = { ...defaultComponents, ...customComponents };
+
+if (!content) {
+  throw new Error("Missing prop: content");
+}
+
+// if (!components) {
+//   throw new Error("Missing prop: components");
+// }
+
+const node = new Node(content, components);
+node.validateElement();
+
+const Tag = node.tag;
+const props = node.props;
+const children = node.children;
+
+// IMPORTANT - DO NOT ADD EXTRA LINE TO THE END OF THIS FILE.
+// ASTRO ADDS AN EXTRA SPACE IN ANCHOR TAGS WHEN YOU DO.
+---
+
+{
+  node.shouldRenderChildren() ? (
+    // IMPORTANT - DO NOT SELF CLOSE THIS TAG. ASTRO FREAKS OUT.
+    <Fragment set:html={children}></Fragment>
+  ) : node.shouldRenderSelf() ? (
+    // @ts-ignore
+    content.map((element) => {
+      return <Astro.self content={element} components={components} />;
+    })
+  ) : node.shouldRenderTag() ? (
+    <Tag {...props}>
+      {node.hasChildren() ? (
+        <Astro.self content={children} components={components} />
+      ) : null}
+    </Tag>
+  ) : null
+}
