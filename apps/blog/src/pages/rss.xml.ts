@@ -1,5 +1,5 @@
 import rss from "@astrojs/rss";
-import { blog } from "@local/shared/markdoc/frontmatter.schema";
+import { blog } from "../content/config";
 import { readAll } from "@local/shared/markdoc/read";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../config";
 
