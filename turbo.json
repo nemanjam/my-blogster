@@ -14,7 +14,7 @@
     "dev": {
       "cache": false
     },
-    "@blog#build": {
+    "blog#build": {
       "cache": false,
       "outputs": []
     }

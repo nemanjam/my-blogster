@@ -1,16 +1,15 @@
 {
-  "name": "blogster",
+  "name": "my-blogster",
   "version": "0.0.1",
   "private": true,
   "workspaces": [
-    "packages/config/*",
-    "packages/*",
-    "blog"
+    "apps/*",
+    "packages/*"
   ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "build:blog": "turbo run @blog#build",
+    "build:blog": "turbo run blog#build",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",
     "lint": "turbo run lint",
@@ -18,13 +17,14 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
+    "eslint-config": "*",
+    "typescript-config": "*",
     "@manypkg/cli": "^0.21.1",
-    "eslint-config-custom": "*",
     "prettier": "^3.1.1",
     "turbo": "^1.11.2"
   },
+  "packageManager": "yarn@1.22.19",
   "engines": {
     "node": ">=20.9.0"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }
