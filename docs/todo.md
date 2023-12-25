@@ -2,5 +2,5 @@
 - setup tailwind theme
 - github actions
 - turbo, vscode, docker
-
-
+- turbo https://github.com/vercel/turbo/tree/main/examples
+- configs https://github.com/kyr0/turbo-hybrid-astro-on-vercel
