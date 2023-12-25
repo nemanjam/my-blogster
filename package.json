@@ -17,10 +17,12 @@
     "format": "turbo run format"
   },
   "devDependencies": {
-    "config-eslint": "*",
-    "config-typescript": "*",
-    "config-prettier": "*",
     "@manypkg/cli": "^0.21.1",
+    "config-eslint": "*",
+    "config-prettier": "*",
+    "config-typescript": "*",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.2",
     "turbo": "^1.11.2"
   },
   "packageManager": "yarn@1.22.19",

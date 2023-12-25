@@ -1,5 +1,5 @@
 {
-  "name": "format",
+  "name": "config-prettier",
   "main": "index.js",
   "bin": "bin/format",
   "license": "MIT",

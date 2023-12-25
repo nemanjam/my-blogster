@@ -1,7 +1,7 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
-import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
 
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.
@@ -17,10 +17,10 @@ const SERVER_PORT = 9003;
 // the url to access your blog during local development
 const LOCALHOST_URL = `http://localhost:${SERVER_PORT}`;
 // the url to access your blog after deploying it somewhere (Eg. Netlify)
-const LIVE_URL = "https://blogster-bubblegum.netlify.app";
+const LIVE_URL = 'https://blogster-bubblegum.netlify.app';
 // this is the astro command your npm script runs
-const SCRIPT = process.env.npm_lifecycle_script || "";
-const isBuild = SCRIPT.includes("astro build");
+const SCRIPT = process.env.npm_lifecycle_script || '';
+const isBuild = SCRIPT.includes('astro build');
 let BASE_URL = LOCALHOST_URL;
 // When you're building your site in local or in CI, you could just set your URL manually
 if (isBuild) {

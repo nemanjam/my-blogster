@@ -1,22 +1,18 @@
 ---
-import { readAll } from "@local/shared/markdoc/read";
-import { blog } from "@local/shared/markdoc/frontmatter.schema";
-import PageLayout from "../layouts/PageLayout.astro";
-import PageMeta from "../components/PageMeta.astro";
-import { SITE_TITLE } from "../config";
+import { readAll } from '@local/shared/markdoc/read';
+import { blog } from '@local/shared/markdoc/frontmatter.schema';
+import PageLayout from '../layouts/PageLayout.astro';
+import PageMeta from '../components/PageMeta.astro';
+import { SITE_TITLE } from '../config';
 
 const posts = await readAll({
-  directory: "blog",
+  directory: 'blog',
   frontmatterSchema: blog,
 });
 
 const sortedPosts = posts
   .filter((p) => p.frontmatter.draft !== true)
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
-  );
+  .sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
 ---
 
 <PageLayout>
@@ -25,12 +21,10 @@ const sortedPosts = posts
     <ul>
       {
         sortedPosts.map((post) => {
-          const formattedDate = new Date(
-            post.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
+          const formattedDate = new Date(post.frontmatter.date).toLocaleDateString('en-us', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
           });
           return (
             <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
@@ -66,9 +60,7 @@ const sortedPosts = posts
                 )}
               </div>
               <div class="text-text-muted text-sm italic pt-1">
-                <time datetime={post.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
+                <time datetime={post.frontmatter.date.toISOString()}>{formattedDate}</time>
               </div>
             </li>
           );

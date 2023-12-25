@@ -1,5 +1,5 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
+import HeaderLink from './HeaderLink.astro';
 ---
 
 <Fragment>
@@ -14,8 +14,7 @@ import HeaderLink from "./HeaderLink.astro";
   </nav>
   <nav class="md:hidden">
     <button id="mobile-menu-open">
-      <i class="fa-solid fa-bars" aria-hidden="true" title="Open mobile menu"
-      ></i>
+      <i class="fa-solid fa-bars" aria-hidden="true" title="Open mobile menu"></i>
       <span class="fa-sr-only">Open mobile menu</span>
     </button>
     <section
@@ -24,10 +23,7 @@ import HeaderLink from "./HeaderLink.astro";
     >
       <div class="bg-bg-body w-[75%] h-full drop-shadow-2xl">
         <button id="mobile-menu-close" class="px-6 h-[5rem] text-lg xml-[1px]">
-          <i
-            class="fa-solid fa-xmark"
-            aria-hidden="true"
-            title="Close mobile menu"></i>
+          <i class="fa-solid fa-xmark" aria-hidden="true" title="Close mobile menu"></i>
           <span class="fa-sr-only">Close mobile menu</span>
         </button>
         <ul class="unset flex flex-col text-text-bold gap-4 [&>li]:p-0 px-6">
@@ -42,18 +38,18 @@ import HeaderLink from "./HeaderLink.astro";
 
 <script>
   // @ts-nocheck
-  document.querySelector("#mobile-menu-open").addEventListener("click", () => {
-    const menuElem = document.querySelector("#mobile-menu");
-    menuElem.classList.remove("hide-menu");
-    menuElem.classList.add("show-menu");
-    document.body.style.overflow = "hidden";
+  document.querySelector('#mobile-menu-open').addEventListener('click', () => {
+    const menuElem = document.querySelector('#mobile-menu');
+    menuElem.classList.remove('hide-menu');
+    menuElem.classList.add('show-menu');
+    document.body.style.overflow = 'hidden';
   });
 
-  document.querySelector("#mobile-menu-close").addEventListener("click", () => {
-    const menuElem = document.querySelector("#mobile-menu");
-    menuElem.classList.remove("show-menu");
-    menuElem.classList.add("hide-menu");
-    document.body.style.overflow = "auto";
+  document.querySelector('#mobile-menu-close').addEventListener('click', () => {
+    const menuElem = document.querySelector('#mobile-menu');
+    menuElem.classList.remove('show-menu');
+    menuElem.classList.add('hide-menu');
+    document.body.style.overflow = 'auto';
   });
 </script>
 
