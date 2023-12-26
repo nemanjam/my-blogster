@@ -4,3 +4,4 @@
 - turbo, vscode, docker
 - turbo https://github.com/vercel/turbo/tree/main/examples
 - configs https://github.com/kyr0/turbo-hybrid-astro-on-vercel
+- astro prettier https://gist.github.com/JLarky/b26a165d628984723fe285201ca699e5

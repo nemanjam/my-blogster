@@ -1,7 +1,11 @@
+const { resolve } = require('node:path');
+const project = resolve(process.cwd(), 'tsconfig.json');
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project,
   },
   env: {
     node: true,
