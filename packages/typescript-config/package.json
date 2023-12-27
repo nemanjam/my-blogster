@@ -1,14 +1,14 @@
 {
-  "name": "typescript-config",
+  "name": "@repo/typescript-config",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "format": "prettier-config"
+    "format": "@repo/prettier-config"
   },
   "files": [
     "base.json"
   ],
   "devDependencies": {
-    "prettier-config": "*"
+    "@repo/prettier-config": "*"
   }
 }

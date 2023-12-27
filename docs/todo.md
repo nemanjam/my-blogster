@@ -49,3 +49,6 @@ so you can run lint format per package...
 everything should be decoupled and modular, reusable, packages // this, important
 you should see separate logs per package in console
 
+------------
+packages in /packages have prefix @repo/ for easier recognizing in dependencies
+

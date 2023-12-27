@@ -17,9 +17,9 @@
     "format": "turbo run format"
   },
   "devDependencies": {
-    "eslint-config": "*",
-    "prettier-config": "*",
-    "typescript-config": "*",
+    "@repo/eslint-config": "*",
+    "@repo/prettier-config": "*",
+    "@repo/typescript-config": "*",
     "@manypkg/cli": "^0.21.1",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.2",
