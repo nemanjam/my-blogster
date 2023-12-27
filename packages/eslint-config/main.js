@@ -1,17 +1,15 @@
-const { resolve } = require('node:path');
-const project = resolve(process.cwd(), 'tsconfig.json');
-
 module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project,
+    project: './tsconfig.json',
   },
   env: {
     node: true,
     es2022: true,
     browser: true,
   },
+  // Configuration for JavaScript files
   extends: ['eslint:recommended', 'turbo', 'prettier'],
   rules: {},
   overrides: [

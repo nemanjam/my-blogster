@@ -1,15 +1,16 @@
 {
-  "name": "config-eslint",
-  "main": "index.js",
+  "name": "eslint-config",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint",
-    "format": "config-prettier"
+    "format": "prettier-config"
   },
+  "files": [
+    "main.js"
+  ],
   "devDependencies": {
-    "config-prettier": "*",
-    "config-typescript": "*",
+    "prettier-config": "*",
+    "typescript-config": "*",
     "@typescript-eslint/eslint-plugin": "^6.16.0",
     "@typescript-eslint/parser": "^6.16.0",
     "eslint": "^8.26.0",

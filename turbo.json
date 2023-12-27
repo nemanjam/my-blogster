@@ -15,7 +15,9 @@
       "cache": false,
       "outputs": []
     },
-    "lint": {},
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
     "format": {}
   }
 }

@@ -16,8 +16,6 @@ const baseSchema = z.object({
 
 // const blog = defineCollection({...})
 
-const xxxxx = 1;
-
 export const blog = z.discriminatedUnion('external', [
   // markdown
   baseSchema.extend({
