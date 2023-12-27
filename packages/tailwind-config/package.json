@@ -5,7 +5,11 @@
   "exports": {
     ".": "./tailwind.config.ts"
   },
+  "scripts": {
+    "lint": "eslint ."
+  },
   "devDependencies": {
+    "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "tailwindcss": "^3.4.0"
   }
