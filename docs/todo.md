@@ -51,4 +51,5 @@ you should see separate logs per package in console
 
 ------------
 packages in /packages have prefix @repo/ for easier recognizing in dependencies
-
+------------------
+react and astro components can be together only in /src folder, in packages must be separate

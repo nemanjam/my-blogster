@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@repo/react-components",
   "version": "0.0.0",
   "sideEffects": [
     "**/*.css"
