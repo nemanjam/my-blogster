@@ -56,3 +56,7 @@ react and astro components can be together only in /src folder, in packages must
 
 astro examples, mdx, ssr..., important
 https://github.dev/withastro/astro/tree/main/examples/blog
+
+-----------
+error in tsconfig.json file can not find astro image from compilerOptions 
+solution: open some .ts file to restart typescript server // general to restart ts server in vs code
