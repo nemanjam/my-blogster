@@ -60,3 +60,6 @@ https://github.dev/withastro/astro/tree/main/examples/blog
 -----------
 error in tsconfig.json file can not find astro image from compilerOptions 
 solution: open some .ts file to restart typescript server // general to restart ts server in vs code
+-----
+in tsconfig.json  "types": ["vite/client"] is same as in env.d.ts ...
+
