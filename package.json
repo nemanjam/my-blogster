@@ -14,7 +14,14 @@
     "manypkg:fix": "manypkg fix",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "format": "turbo run format"
+    "format": "turbo run format",
+    "check-types": "turbo run check-types",
+    "print:nm": "find . -name 'node_modules' -type d -prune -print",
+    "print:t": "find . -name '.turbo' -type d -prune -print",
+    "print": "yarn print:nm & yarn print:t",
+    "clean:nm": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "clean:t": "find . -name '.turbo' -type d -prune -exec rm -rf '{}' +",
+    "clean": "yarn clean:nm & yarn clean:t"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

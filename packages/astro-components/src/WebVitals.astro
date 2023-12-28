@@ -3,9 +3,11 @@
  * The web vitals script retrieves this at runtime from the `<web-vitals-data>`
  * element this component also injects.
  */
-const path = Object.entries(Astro.params).reduce(
+const { params, url } = Astro;
+
+const path = Object.entries(params).reduce(
   (acc, [key, value]) => acc.replace(value as string, `[${key}]`),
-  Astro.url.pathname
+  url.pathname
 );
 ---
 

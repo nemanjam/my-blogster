@@ -5,7 +5,8 @@
   "compilerOptions": {
     "baseUrl": "../../",
     "paths": {
-      "@packages/*": ["packages/*"]
+      "@packages/*": ["packages/*"],
+      "@apps/*": ["apps/*"]
     },
     "jsx": "react-jsx"
   },

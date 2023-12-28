@@ -10,7 +10,8 @@
     "astro": "astro",
     "clean": "rm -rf dist",
     "lint": "eslint .",
-    "format": "prettier-config"
+    "format": "prettier-config",
+    "check-types": "tsc --noEmit --pretty"
   },
   "dependencies": {
     "@astrojs/prism": "^3.0.0",
