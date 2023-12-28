@@ -13,12 +13,14 @@
     "build": "tailwindcss -i ./src/styles.css -o dist/index.css",
     "lint": "eslint src/",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "format": "prettier-config"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/prettier-config": "*",
     "@types/react": "^18.2.38",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",

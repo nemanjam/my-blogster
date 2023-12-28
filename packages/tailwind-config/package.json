@@ -6,11 +6,13 @@
     ".": "./tailwind.config.ts"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier-config"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/prettier-config": "*",
     "tailwindcss": "^3.4.0"
   }
 }

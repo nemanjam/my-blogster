@@ -3,6 +3,7 @@
   "extends": "astro/tsconfigs/strict",
   "display": "Default",
   "compilerOptions": {
+    "types": ["@astrojs/image/client"],
     "baseUrl": "../../",
     "paths": {
       "@packages/*": ["packages/*"]
