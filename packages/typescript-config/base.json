@@ -6,7 +6,8 @@
     "baseUrl": "../../",
     "paths": {
       "@packages/*": ["packages/*"],
-      "@apps/*": ["apps/*"]
+      "@apps/*": ["apps/*"],
+      "~/*": ["apps/astrowind/src/*"]
     },
     "jsx": "react-jsx"
   },

@@ -12,7 +12,7 @@
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o dist/index.css",
     "lint": "eslint src/",
-    "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "disabled-dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
     "check-types": "tsc --noEmit --pretty",
     "format": "prettier-config"
   },
