@@ -12,6 +12,10 @@
       "cache": false,
       "persistent": true
     },
+    "astrowind#dev": {
+      "cache": false,
+      "persistent": true
+    },
     "blog#build": {
       "cache": false,
       "outputs": []

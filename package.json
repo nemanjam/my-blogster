@@ -9,6 +9,7 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
+    "dev:aw": "turbo run astrowind#dev",
     "build:blog": "turbo run blog#build",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",

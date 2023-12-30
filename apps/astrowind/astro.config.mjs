@@ -27,6 +27,7 @@ export default defineConfig({
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
+  server: { port: 3000 },
 
   output: 'static',
 

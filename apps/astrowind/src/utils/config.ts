@@ -78,7 +78,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   analytics?: unknown;
 };
 
-console.log('config', JSON.stringify(config, null, 2));
+// console.log('config', JSON.stringify(config, null, 2));
 
 const DEFAULT_SITE_NAME = 'Website';
 
