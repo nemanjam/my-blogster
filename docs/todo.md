@@ -64,3 +64,9 @@ solution: open some .ts file to restart typescript server // general to restart 
 in tsconfig.json  "types": ["vite/client"] is same as in env.d.ts ...
 ----
 merge tsconfig.json files?
+-----------
+types.d.ts types become global, no need for imports
+-------
+make bin and . for eslint same as prettier, and move ignore files in package
+nothing global
+main or bin is entry point of package
