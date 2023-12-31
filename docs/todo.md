@@ -73,3 +73,9 @@ main or bin is entry point of package
 remove shell -> js -> shell to script.sh and call it in bin:
 ----------
 write github actions for deploy, 1. copy to nginx, 2. build docker image, 3. lint, format, typecheck
+-------
+decap cms docker
+https://github.com/itsmejoeeey/docker-decap-cms-standalone
+https://www.reddit.com/r/selfhosted/comments/110elej/selfhosting_netlify_cms/?sort=confidence
+-------
+todo: write dockerfile for astrowind, adjust for monorepo

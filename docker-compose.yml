@@ -1,14 +1,16 @@
-version: '3'
+# used only for dev, localhost:8080
+
+version: '3.8'
 
 services:
-  blog:
-    container_name: blog
-    build:
-      context: .
-      dockerfile: ./apps/blog/Dockerfile
+  astrowind:
+    container_name: astrowind
     restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: ./apps/astrowind/docker/Dockerfile
     ports:
-      - 3000:3000
+      - '8080:8080'
     networks:
       - proxy
 
