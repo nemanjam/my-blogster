@@ -70,3 +70,5 @@ types.d.ts types become global, no need for imports
 make bin and . for eslint same as prettier, and move ignore files in package
 nothing global
 main or bin is entry point of package
+----------
+write github actions for deploy, 1. copy to nginx, 2. build docker image, 3. lint, format, typecheck
