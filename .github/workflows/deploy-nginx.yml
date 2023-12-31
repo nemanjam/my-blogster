@@ -1,0 +1,42 @@
+name: Deploy Astrowind Nginx
+
+on:
+  push:
+    branches:
+      - 'disabled-main'
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+'
+  pull_request:
+    branches:
+      - 'disabled-main'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.10.0'
+          registry-url: 'https://registry.yarnpkg.com'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      # fix this for turbo
+      - name: Build Astrowind app
+        run: yarn build
+
+      - name: Copy dist folder to remote host
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "dist/"
+          target: "/home/ubuntu/traefik-proxy/apps/nginx-with-volume/website"
