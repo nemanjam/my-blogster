@@ -22,7 +22,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
+        with:
+          fetch-depth: 1
+          
       - name: Print commit id, message and tag
         run: |
           git show -s --format='%h %s'
