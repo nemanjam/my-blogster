@@ -1,4 +1,4 @@
-name: Build and publish a Astrowind Docker image
+name: Build and push Astrowind Docker image
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
 
       - name: Print commit id, message and tag
         run: |
-          git show -s --format='%h %s' ;
+          git show -s --format='%h %s'
           echo "github.ref -> {{ github.ref }}"
  
       - name: Docker metadata
@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./apps/astrowind/
-          
+
           # build app is in Dockerfile
           file: ./docker/Dockerfile
           push: true

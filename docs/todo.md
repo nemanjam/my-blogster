@@ -79,3 +79,4 @@ https://github.com/itsmejoeeey/docker-decap-cms-standalone
 https://www.reddit.com/r/selfhosted/comments/110elej/selfhosting_netlify_cms/?sort=confidence
 -------
 todo: write dockerfile for astrowind, adjust for monorepo
+need to have app working with monorepo to do docker and github action deploy
