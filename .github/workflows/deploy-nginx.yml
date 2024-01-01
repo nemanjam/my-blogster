@@ -47,5 +47,6 @@ jobs:
           key: ${{ secrets.REMOTE_KEY_ED25519 }}
           port: ${{ secrets.REMOTE_PORT }}
           source: "apps/nemanjamiticcom/dist/"
-          # will overwrite existing website/dist
           target: "/home/ubuntu/traefik-proxy/apps/nginx-with-volume-nmc/website"
+          # remove website dir
+          rm: true
