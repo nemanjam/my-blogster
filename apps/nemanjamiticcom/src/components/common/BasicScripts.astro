@@ -18,7 +18,10 @@ import { UI } from '~/utils/config';
   }
 
   const initTheme = function () {
-    if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
+    if (
+      (defaultTheme && defaultTheme.endsWith(':only')) ||
+      (!localStorage.theme && defaultTheme !== 'system')
+    ) {
       applyTheme(defaultTheme.replace(':only', ''));
     } else if (
       localStorage.theme === 'dark' ||

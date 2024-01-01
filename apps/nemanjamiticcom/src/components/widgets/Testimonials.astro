@@ -5,7 +5,6 @@ import Button from '~/components/ui/Button.astro';
 import Image from '~/components/common/Image.astro';
 import type { Testimonials } from '~/types';
 
-
 const {
   title = '',
   subtitle = '',
@@ -20,7 +19,12 @@ const {
 } = Astro.props as Testimonials;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`}
+  bg={bg}
+>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
 
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

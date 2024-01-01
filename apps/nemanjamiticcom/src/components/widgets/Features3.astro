@@ -26,9 +26,9 @@ const {
 <WidgetWrapper
   id={id}
   isDark={isDark}
-  containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''} ${
-    classes?.container ?? ''
-  }`}
+  containerClass={`${isBeforeContent ? 'md:pb-8 lg:pb-12' : ''} ${
+    isAfterContent ? 'pt-0 md:pt-0 lg:pt-0' : ''
+  } ${classes?.container ?? ''}`}
   bg={bg}
 >
   <Headline title={title} subtitle={subtitle} tagline={tagline} classes={classes?.headline} />

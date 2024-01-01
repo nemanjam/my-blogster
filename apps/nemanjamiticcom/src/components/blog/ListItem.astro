@@ -21,7 +21,9 @@ const image = (await findImage(post.image)) as ImageMetadata | undefined;
 const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : '';
 ---
 
-<article class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}>
+<article
+  class={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${image ? 'md:grid-cols-2' : ''}`}
+>
   {
     image && (
       <a class="relative block group" href={link ?? 'javascript:void(0)'}>
@@ -48,13 +50,18 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       <div class="mb-1">
         <span class="text-sm">
           <Icon name="tabler:clock" class="w-3.5 h-3.5 inline-block -mt-0.5 dark:text-gray-400" />
-          <time datetime={String(post.publishDate)} class="inline-block">{getFormattedDate(post.publishDate)}</time>
+          <time datetime={String(post.publishDate)} class="inline-block"
+            >{getFormattedDate(post.publishDate)}</time
+          >
           {
             post.category && (
               <>
                 {' '}
                 ·{' '}
-                <a class="capitalize hover:underline" href={getPermalink(post.category, 'category')}>
+                <a
+                  class="capitalize hover:underline"
+                  href={getPermalink(post.category, 'category')}
+                >
                   {post.category.replaceAll('-', ' ')}
                 </a>
               </>
@@ -65,7 +72,10 @@ const link = APP_BLOG?.post?.isEnabled ? getPermalink(post.permalink, 'post') : 
       <h2 class="text-xl sm:text-2xl font-bold leading-tight mb-2 font-heading dark:text-slate-300">
         {
           link ? (
-            <a class="hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200" href={link}>
+            <a
+              class="hover:text-primary dark:hover:text-blue-700 transition ease-in duration-200"
+              href={link}
+            >
               {post.title}
             </a>
           ) : (

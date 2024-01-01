@@ -45,7 +45,11 @@ const {
           )
         }
         <div class="max-w-3xl mx-auto lg:max-w-none">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
+          {
+            subtitle && (
+              <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />
+            )
+          }
 
           {
             actions && (

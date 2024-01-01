@@ -2,7 +2,13 @@
 import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
+const {
+  inputs,
+  textarea,
+  disclaimer,
+  button = 'Contact us',
+  description = '',
+} = Astro.props as Form;
 ---
 
 <form>
@@ -59,7 +65,10 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
           />
         </div>
         <div class="ml-3">
-          <label for="disclaimer" class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400">
+          <label
+            for="disclaimer"
+            class="cursor-pointer select-none text-sm text-gray-600 dark:text-gray-400"
+          >
             {disclaimer.label}
           </label>
         </div>
@@ -70,7 +79,9 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">{button}</Button>
+        <Button variant="primary" type="submit">
+          {button}
+        </Button>
       </div>
     )
   }

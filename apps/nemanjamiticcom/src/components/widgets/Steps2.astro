@@ -20,9 +20,20 @@ const {
 } = Astro.props as Steps;
 ---
 
-<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
-  <div class={`flex flex-col gap-8 md:gap-12 md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}>
-    <div class={`w-full lg:w-1/2 gap-8 md:gap-12 ${isReversed ? 'lg:ml-16 md:ml-8 ml-0' : 'lg:mr-16 md:mr-8 mr-0'}`}>
+<WidgetWrapper
+  id={id}
+  isDark={isDark}
+  containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`}
+  bg={bg}
+>
+  <div
+    class={`flex flex-col gap-8 md:gap-12 md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}
+  >
+    <div
+      class={`w-full lg:w-1/2 gap-8 md:gap-12 ${
+        isReversed ? 'lg:ml-16 md:ml-8 ml-0' : 'lg:mr-16 md:mr-8 mr-0'
+      }`}
+    >
       <Headline
         title={title}
         subtitle={subtitle}
@@ -42,9 +53,7 @@ const {
           ) : (
             callToAction &&
             callToAction.text &&
-            callToAction.href && (
-              <Button variant="primary" {...callToAction} class="mb-12 w-auto"/>
-            )
+            callToAction.href && <Button variant="primary" {...callToAction} class="mb-12 w-auto" />
           )
         }
       </div>

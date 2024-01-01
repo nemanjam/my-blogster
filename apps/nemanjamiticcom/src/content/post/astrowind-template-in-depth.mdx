@@ -28,17 +28,17 @@ As the name suggests, _AstroWind_ relies on _TailWind_ for styling. Furthermore,
 The styling mechanism consists of the following files (all paths are prefixed with `/src/` ):
 
 <DListItem dt="assets/styles/tailwind.css">
-  This file is essentially an extension of _TailWind's_ base.css. High-level component styles are defined here. Note
-  also styling on elements selected by 'attribute' selectors at the bottom of the files, particularly those selected by
-  'data' attributes.
+  This file is essentially an extension of _TailWind's_ base.css. High-level component styles are
+  defined here. Note also styling on elements selected by 'attribute' selectors at the bottom of the
+  files, particularly those selected by 'data' attributes.
 </DListItem>
 <DListItem dt="components/CustomStyles.astro">
-  Defines custom colors and fonts. For these to take effect in the 'base.css' file, they need to be loaded in the html
-  header section. See next.
+  Defines custom colors and fonts. For these to take effect in the 'base.css' file, they need to be
+  loaded in the html header section. See next.
 </DListItem>
 <DListItem dt="layouts/Layout.astro">
-  This layout is used for all of the pages rendered by _AstroWind_. The contents of _tailwind.css_ and
-  _CustomStyles.astro_ component, described above, is injected into the html header.
+  This layout is used for all of the pages rendered by _AstroWind_. The contents of _tailwind.css_
+  and _CustomStyles.astro_ component, described above, is injected into the html header.
 </DListItem>
 
 ### Dark Mode
@@ -124,7 +124,9 @@ import MyComponent from '../../components/MyComponent';
 
 {' '}
 
-<MyComponent title="This is a slot implementor">### Here is some markdown content - With a bullet item.</MyComponent>
+<MyComponent title="This is a slot implementor">
+  ### Here is some markdown content - With a bullet item.
+</MyComponent>
 ```
 
 _MyComponent_ renders the markdown to html and then injects it into the div.
@@ -152,8 +154,9 @@ You'll note that the index file imports a lot of components, each one roughly an
   </Fragment>
 
   <Fragment slot="subtitle">
-    Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste
-    more time! :P
+    Be very surprised by these huge fake numbers you are seeing on this page. <br
+      class="hidden md:inline"
+    />Don't waste more time! :P
   </Fragment>
 </CallToAction>
 ```
@@ -161,8 +164,8 @@ You'll note that the index file imports a lot of components, each one roughly an
 Some things to note, here:
 
 <DListItem dt="The <em>callToAction</em> argument">
-  This argument is actually being passed a javascript object -- not a string. (However, in the TS definition, it could
-  be a string...)
+  This argument is actually being passed a javascript object -- not a string. (However, in the TS
+  definition, it could be a string...)
 </DListItem>
 <DListItem dt="There are several <em>Fragment</em> children">
   Furthermore, these &lt;Fragment/&gt; elements each have a _slot="(value)"_ specifier.
@@ -184,8 +187,9 @@ So, in the example above, the _CallToAction_ component defines the _subtitle_ sl
 
 ```astro
 <Fragment slot="subtitle">
-  Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste
-  more time! :P
+  Be very surprised by these huge fake numbers you are seeing on this page. <br
+    class="hidden md:inline"
+  />Don't waste more time! :P
 </Fragment>
 ```
 
@@ -199,7 +203,7 @@ const { subtitle = await Astro.slots.render('subtitle') } = Astro.props;
 
 //...
 {subtitle && <p class="text-xl text-muted dark:text-slate-400" set:html={subtitle} />}
- //...
+//...
 ```
 
 There's a lot to wrap your head around, here.
