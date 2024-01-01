@@ -5,3 +5,7 @@ This set-up follows the guidance of the [official turbo repo docs](https://turbo
 ### Note
 
 Let it be like this for now, it just exports `eslintrc.js` (`base.js`) with `package.json.files` and thats it. Otherwise `eslint .` path and options need to be forwarded.
+
+### Note 2
+
+Done, same as `prettier-config`. Must have both `main, bin` and `files` to export `base.js` `.eslintrc.js`.`

@@ -2,6 +2,8 @@
   "name": "@repo/eslint-config",
   "version": "0.0.1",
   "license": "MIT",
+  "main": "index.js",
+  "bin": "bin/lint",
   "scripts": {
     "format": "prettier-config"
   },

@@ -4,7 +4,7 @@
   "description": "This package contains a Astro components to use in Astro apps.",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src/",
+    "lint": "eslint-config",
     "format": "prettier-config",
     "check-types": "tsc --noEmit --pretty"
   },
