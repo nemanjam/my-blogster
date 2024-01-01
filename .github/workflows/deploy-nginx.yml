@@ -48,5 +48,8 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
           source: "apps/nemanjamiticcom/dist/"
           target: "/home/ubuntu/traefik-proxy/apps/nginx-with-volume-nmc/website"
+          
+          # remove apps/nemanjamiticcom path segments
+          strip_components: 2
           # remove website dir
           rm: true
