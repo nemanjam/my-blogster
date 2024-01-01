@@ -42,10 +42,10 @@ jobs:
       - name: Copy dist folder to remote host
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USERNAME }}
-          key: ${{ secrets.VPS_KEY_ED25519 }}
-          port: ${{ secrets.VPS_PORT }}
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USERNAME }}
+          key: ${{ secrets.REMOTE_KEY_ED25519 }}
+          port: ${{ secrets.REMOTE_PORT }}
           source: "dist/"
           # will overwrite existing website/dist
           target: "/home/ubuntu/traefik-proxy/apps/nginx-with-volume-nmc/website"
