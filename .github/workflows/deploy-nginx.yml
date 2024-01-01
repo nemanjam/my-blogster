@@ -1,4 +1,4 @@
-name: Deploy Astrowind Nginx
+name: Deploy nemanjamiticcom Nginx
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       # fix this for turbo
-      - name: Build Astrowind app
+      - name: Build nemanjamiticcom app
         run: yarn build
 
       - name: Copy dist folder to remote host

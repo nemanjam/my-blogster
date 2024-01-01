@@ -1,15 +1,15 @@
 export const config = {
   site: {
-    name: 'AstroWind',
-    site: 'https://astrowind.vercel.app',
+    name: 'nemanjamiticcom',
+    site: 'https://nemanjamiticcom.vercel.app',
     base: '/',
     trailingSlash: false,
     googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
   },
   metadata: {
     title: {
-      default: 'AstroWind',
-      template: '%s — AstroWind',
+      default: 'nemanjamiticcom',
+      template: '%s — nemanjamiticcom',
     },
     description:
       '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
@@ -18,7 +18,7 @@ export const config = {
       follow: true,
     },
     openGraph: {
-      site_name: 'AstroWind',
+      site_name: 'nemanjamiticcom',
       images: [
         {
           url: '~/assets/images/default.png',

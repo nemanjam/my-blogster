@@ -1,5 +1,5 @@
 {
-  "name": "my-blogster",
+  "name": "astro-turborepo-template",
   "version": "0.0.1",
   "private": true,
   "workspaces": [
@@ -9,8 +9,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "dev:aw": "turbo run astrowind#dev",
-    "build:blog": "turbo run blog#build",
+    "dev:nmc": "turbo run @apps/nemanjamiticcom#dev",
+    "build:nmc": "turbo run @apps/nemanjamiticcom#build",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",
     "lint": "turbo run lint",
@@ -36,6 +36,6 @@
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.10.0"
   }
 }

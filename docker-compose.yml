@@ -3,12 +3,12 @@
 version: '3.8'
 
 services:
-  astrowind:
-    container_name: astrowind
+  nemanjamiticcom:
+    container_name: nemanjamiticcom
     restart: unless-stopped
     build:
       context: ./
-      dockerfile: ./apps/astrowind/docker/Dockerfile
+      dockerfile: ./apps/nemanjamiticcom/docker/Dockerfile
     ports:
       - '8080:8080'
     networks:

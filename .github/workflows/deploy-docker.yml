@@ -1,9 +1,9 @@
-name: Deploy latest Astrowind Docker image
+name: Deploy latest nemanjamiticcom Docker image
 
 
 on:
   workflow_run:
-    workflows: ['Build and push Astrowind Docker image - disabled']
+    workflows: ['Build and push nemanjamiticcom Docker image - disabled']
     types:
       - completed
 
@@ -24,18 +24,18 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script_stop: true
           script: |
-            cd /home/ubuntu/traefik-proxy/apps/astrowind
+            cd /home/ubuntu/traefik-proxy/apps/nemanjamiticcom
 
-            echo "Old image tag: $(docker inspect --format '{{ index .RepoTags 0 }}' nemanjamitic/astrowind)"
-            echo "Old image hash: $(docker inspect --format '{{ index .RepoDigests 0 }}' nemanjamitic/astrowind)"
+            echo "Old image tag: $(docker inspect --format '{{ index .RepoTags 0 }}' nemanjamitic/nemanjamiticcom)"
+            echo "Old image hash: $(docker inspect --format '{{ index .RepoDigests 0 }}' nemanjamitic/nemanjamiticcom)"
 
             docker-compose down
-            docker image rm nemanjamitic/astrowind:latest
+            docker image rm nemanjamitic/nemanjamiticcom:latest
 
             docker-compose up -d
 
-            echo "New image tag: $(docker inspect --format '{{ index .RepoTags 0 }}' nemanjamitic/astrowind)"
-            echo "New image hash: $(docker inspect --format '{{ index .RepoDigests 0 }}' nemanjamitic/astrowind)"
+            echo "New image tag: $(docker inspect --format '{{ index .RepoTags 0 }}' nemanjamitic/nemanjamiticcom)"
+            echo "New image hash: $(docker inspect --format '{{ index .RepoDigests 0 }}' nemanjamitic/nemanjamiticcom)"
 
                   
             # remove dangling images, optional

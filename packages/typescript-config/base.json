@@ -7,7 +7,7 @@
     "paths": {
       "@packages/*": ["packages/*"],
       "@apps/*": ["apps/*"],
-      "~/*": ["apps/astrowind/src/*"]
+      "~/*": ["apps/nemanjamiticcom/src/*"]
     },
     "jsx": "react-jsx"
   },

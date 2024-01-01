@@ -12,11 +12,11 @@
       "cache": false,
       "persistent": true
     },
-    "astrowind#dev": {
+    "@apps/nemanjamiticcom#dev": {
       "cache": false,
       "persistent": true
     },
-    "blog#build": {
+    "@apps/nemanjamiticcom#build": {
       "cache": false,
       "outputs": []
     },

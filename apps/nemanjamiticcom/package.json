@@ -1,5 +1,5 @@
 {
-  "name": "astrowind",
+  "name": "@apps/nemanjamiticcom",
   "description": "AstroWind: A free template using Astro 3.0 and Tailwind CSS. Astro starter theme.",
   "version": "1.0.0-beta.12",
   "private": true,
@@ -52,6 +52,6 @@
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=20.10.0"
   }
 }
