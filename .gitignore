@@ -14,6 +14,9 @@ coverage
 out/
 build
 
+# only on this level
+dist/
+
 # misc
 .DS_Store
 *.pem
@@ -24,11 +27,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# env files, only on this level
+.env
+.env.development
+.env.production
 
 # turbo
 .turbo
+/**/.turbo/

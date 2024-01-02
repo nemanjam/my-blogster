@@ -24,7 +24,7 @@ const whenExternalScripts = (items = []) =>
     : [];
 
 export default defineConfig({
-  site: SITE.site,
+  site: import.meta.env.PUBLIC_SITE_HOSTNAME, // todo: merge env in yaml
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
   server: { port: 3000 },

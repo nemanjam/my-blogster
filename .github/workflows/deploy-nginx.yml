@@ -11,6 +11,9 @@ on:
       - 'disabled-main'
   workflow_dispatch:
 
+env:
+  PUBLIC_SITE_HOSTNAME: nemanjamitic.com
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

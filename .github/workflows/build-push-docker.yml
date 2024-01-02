@@ -13,6 +13,8 @@ on:
 
 env:
   IMAGE_NAME: ${{ github.repository }}
+  # set this
+  PUBLIC_SITE_HOSTNAME: nemanjamitic.com
 
 jobs:
   build:
